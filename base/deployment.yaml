@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kdemo-deployment
+  labels:
+    app: kdemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kdemo
+  template:
+    metadata:
+      labels:
+        app: kdemo
+    spec:
+      containers:
+      - name: kdemo
+        image: mikerowehl/kdemo:latest
+        ports:
+        - containerPort: 8080
