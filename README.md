@@ -18,7 +18,7 @@ you want to try it. But here's an example anyway.
 * start up a kind cluster
 * run the cloud-provider-kind program (I do this in another terminal)
 * KO_DOCKER_REPO=mikerowehl/kdemo ko build --bare --tags=latest --platform=linux/amd64
-* cd bare
+* cd base
 * kubectl apply -k .
 
 When the service comes up with an external IP, you should be able to hit the
